@@ -1,25 +1,58 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonList, IonInput, IonButton  } from '@ionic/react';
+import React from 'react';
+
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
-const Tab1: React.FC = () => {
+
+function Example() {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Call Volume</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
-      </IonContent>
+    <IonContent color="primary">
+      <IonList inset={true}>
+        <IonItem>
+          <IonInput label="DRC_ISERVICE" ></IonInput>
+        </IonItem>
+        <IonItem>
+          <IonInput label="DRC_ISUPPORT"></IonInput>
+        </IonItem>
+        <IonItem>
+          <IonInput label="DRC_ISALES"></IonInput>
+        </IonItem>
+        <IonItem>
+          <IonInput label="DRC_BMAS"></IonInput>
+        </IonItem>
+        <IonItem>
+          <IonInput label="DRC_IREISSUE"></IonInput>
+        </IonItem>
+        <IonItem>
+          <IonInput label="DRC_AADV"></IonInput>
+        </IonItem>
+        <IonItem>
+          <IonInput label="DRC_AGP"></IonInput>
+        </IonItem>
+        <IonItem>
+          <IonInput label="DRC_REISSUE"></IonInput>
+        </IonItem>
+        <IonItem>
+          <IonInput label="DRC_SALES"></IonInput>
+        </IonItem>
+        <IonItem>
+          <IonInput label="DRC_SERVICE"></IonInput>
+        </IonItem>
+        <IonButton>Submit</IonButton>
+        <IonItem>
+          <IonLabel>TOTAL CALLS</IonLabel>
+        </IonItem>
+      </IonList>
+    </IonContent>
     </IonPage>
   );
-};
-
-export default Tab1;
+}
+export default Example;
