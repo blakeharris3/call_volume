@@ -1,0 +1,7 @@
+{
+  "name": "Call Volume",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
